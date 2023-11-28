@@ -1,35 +1,47 @@
 # GTS_TEST
-The entrance exam for Wales University focuses on assessing overall abilities. It involves a two-stage selection process based on the results of the initial examination that covers five subjects: English, Mathematics, Science, Urdu, and Geography/History, each with a maximum score of 100 points. To pass the selection process, applicants must meet the following conditions in both stages.
-A total score of 350 points or more in all subjects
-Science applicants must have a total score of 160 or higher in two science subjects (mathematics and science)
-Humanities applicants must have a total score of 160 or higher in two humanities subjects (Urdu, Geography/History)
-Since the score of each subject of each examinee is entered, please find how many people can pass the two-stage selection.
-This explanation corresponds to example input 1 in the test.
-Examinee 2 has a total of 350 points or more in all subjects, but the total of two humanities subjects is less than 160 points, so the examinee failed. On the other hand, for examinee 4, they have a total of 160 points or more in two science subjects, but their overall total is less than 350 points so they fail the admission test.
-→ Number of Passers: 2
-Value to be entered
-Input is given in the following format:
-N
-t_1 e_1 m_1 s_1 u_1 g_1
-t_2 e_2 m_2 s_2 u_2 g_2
-...
-t_N e_N m_N s_N u_N g_N
-Each value is passed as a string from standard input. Please check here for how to get the value from the standard input
-Expected output
-Please print in one line as an integer how many people can pass the two-step selection of the Wales University entrance examination.
-End with a line break and do not include extra characters or blank lines.
-Conditions
-All test cases satisfy the following conditions.
-Input example 1
+
+# Wales University Entrance Exam
+
+## Overview
+The entrance exam for Wales University assesses overall abilities through a two-stage selection process. The exam includes five subjects: English, Mathematics, Science, Urdu, and Geography/History, each with a maximum score of 100 points.
+
+### Selection Criteria
+- **Total Score**: A minimum of 350 points across all subjects.
+- **Science Applicants**:
+    - A minimum of 160 points combined in Mathematics and Science.
+- **Humanities Applicants**:
+    - A minimum of 160 points combined in Urdu and Geography/History.
+
+### Example
+- Examinee 1 (Science) scores 70 in English, 78 in Math, 82 in Science, 57 in Urdu, and 74 in Geography/History, totaling 361. They pass.
+- Examinee 2 (Humanities) scores 68 in English, 81 in Math, 81 in Science, 60 in Urdu, and 78 in Geography/History, totaling 368. They fail due to insufficient points in humanities subjects.
+
+## Input Format
+- First line: An integer `N` representing the number of examinees.
+- Next `N` lines: Each line contains a classification letter (`l` for humanities, `s` for science), followed by integers representing scores in English, Mathematics, Science, Urdu, and Geography/History.
+
+### Example
+```
 5
 s 70 78 82 57 74
 l 68 81 81 60 78
 s 63 76 55 80 75
 s 90 100 96 10 10
 l 88 78 81 97 93
-Output example 1
+```
+
+## Output Format
+Print the number of applicants who pass the two-stage selection as an integer.
+
+### Example Output for Above Input
+```
 2
-Input example 2
+```
+
+## Additional Test Case
+
+### Input Example 2
+```
 20
 l 100 67 39 85 87
 s 38 75 75 45 90
@@ -51,8 +63,9 @@ s 60 92 64 66 11
 l 61 47 6 21 83
 l 68 1 47 81 78
 l 8 72 54 20 25
-Output example 2
+```
+
+### Output Example 2
+```
 3
-Additional Information
-Please use a programming language you feel most comfortable completing this test.
-Any type of GUI is acceptable.
+```
